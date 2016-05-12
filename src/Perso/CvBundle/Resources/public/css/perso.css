@@ -1,0 +1,144 @@
+@ Import{ url (http://fonts.googleapis.com/css?family=Pacifico );}
+
+@import {url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);}
+
+body{
+	background-image:url("../images/background.png");
+}
+
+/*header #photo {
+	margin-top:10px;
+	width:137px;
+	height:137px;
+	border:7px solid rgb(255,255,255);
+	border-radius:5px;
+	box-shadow: 3px 3px 3px rgb(154,154,154);
+}*/
+
+.container {
+	max-width:950px;
+}
+
+header #titre {
+	color:rgb(0,45,64);
+	font-family: 'Pacifico';
+	font-weight:lighter;
+	font-size:50px;
+	margin-top:0;
+}
+
+header #description {
+	color:rgb(3,99,139);
+	font-family: 'Source Sans Pro';
+	font-weight:lighter;
+	font-size:22px;
+	margin-top:-25px;
+}
+
+header #nav-header {
+	margin-top:20px;
+}
+
+.titre_logo {
+	margin-top:20px;
+}
+
+
+.titre_logo H3{
+	margin-left:5px;
+	height:50px;
+	font-family: 'Pacifico';
+	font-weight:lighter;
+	font-size:25px;
+	color:rgb(0,45,64);
+	vertical-align:top;
+	display:inline-block;
+	margin-top:2px;
+}
+
+.inline-form input {
+  display: inline-block;
+  width: 100px;
+}
+
+/* Compétences / Expériences / Formations */
+
+.domaine .title {
+	font-size: 16px;
+	color:rgb(0,45,64);
+	margin-top:0px;
+}
+.domaine .title small {
+	font-size: 12px;
+}
+.description {
+	font-size: 14px;
+	color:rgb(102,102,99);
+}
+.description_valeur {
+	font-size: 14px;
+	color: #333;
+}
+.domaine {
+	margin-top:20px;
+}
+
+#jumbotron-book {
+	padding:0px 15px 10px 15px;
+	background: rgba(238, 238, 238, 0.7);
+}
+#jumbotron-book .container-fluid {
+	padding:10px;
+}
+#jumbotron-book .container-fluid p {
+	font-size: 14px;
+}
+#jumbotron-book .label{
+	font-size:12px;
+}
+
+/* Footer */
+
+footer {
+	margin-top:40px;
+	padding:20px 20px 10px 20px;
+	background-color: #f8f8f8;
+	border-radius:4px;
+	color:#777777;
+}
+
+footer a {
+	color:#777777;
+}
+
+footer a:hover {
+	color:#333333;
+	text-decoration:none;
+}
+
+/* Css spécial pour mobiles */
+
+@media all and (max-device-width: 480px)
+{
+	header #titre {
+		font-size:35px;
+	}
+	header #description {
+		font-size:16px;
+	}
+	.domaine .title {
+		font-size: 12px;
+	}
+}
+
+/* Css spécial pour tablettes */
+
+@media (max-width: 768px) {
+	header #titre {
+		font-size:40px;
+	}
+	.domaine .title {
+		font-size: 14px;
+	}
+}
+

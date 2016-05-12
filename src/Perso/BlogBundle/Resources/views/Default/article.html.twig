@@ -1,0 +1,63 @@
+{# src/Perso/BlogBundle/Resources/view/Default/category.html.twig #}
+
+
+{% extends "PersoBlogBundle:Default:index.html.twig" %}
+
+{% block title %}
+  {{ parent() }} - {{ article.title }}
+{% endblock %}
+
+{% block breadcrumb %}
+  {{ parent() }}
+  <li class="active">Article {{ article.title }}</li>
+{% endblock %}
+
+{% block blog %}
+
+<h2>
+	{{ article.title }}
+</h2>
+	{# Fonctions admin #}
+	{% if is_granted('ROLE_ADMIN') %}
+		<div class="btn-group btn-group-xs pull-right"><a href="{{ path('perso_blog_article_edit',{'id' : article.id }) }}" class="btn btn-warning">Modifier</a> <a href="{{ path('perso_blog_article_delete',{'id' : article.id }) }}" class="btn btn-danger">Supprimer</a></div>
+	{% endif %}
+
+  	<article class="domaine">
+
+        <div class="description">{{ article.content|raw }}</div>
+		<div class="author"><span class="label label-default">Article écrit par {{ article.author }}, le {{ article.datecreate|date('d/m/Y') }}</span></div>
+		<div class="categories"><strong>Catégories associées</strong> : 
+		  {% for category in article.categories %}
+			<span><img class="hidden-xs" src="{{ asset('bundles/perso/images/titres/experiences_pro.png') }}" alt="Expériences">  <a href="{{ path('perso_blog_category', {'name' : category.name }) }}" title="{{ category.name }}">{{ category.name }}</a></span>
+			
+		  {% endfor %}
+		</div>
+	
+	</article>
+	<section id="comments">
+		<h3>Commentaires ({{article.getNbComments}})</h3>
+		{% if article.comments %}
+			{% for comment in article.comments %}
+				<div class="domaine">
+					<div class="title">
+						<span class="glyphicon glyphicon-user"></span> Commentaire de <strong>{{ comment.author }}</strong> <small> - Posté le {{ comment.date|date('d/m/Y') }}</small>
+					</div>
+					<div class="description">
+						{# Fonctions admin #}
+						{% if is_granted('ROLE_ADMIN') %}
+						  <div class="btn-group btn-group-xs"><a href="{{ path('perso_blog_comment_edit',{'id' : comment.id }) }}" class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span></a> <a href="{{ path('perso_blog_comment_delete',{'id' : comment.id }) }}" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></a></div>
+						{% endif %}
+						{{ comment.comment }}
+					</div>
+				</div>
+			{% endfor %}
+		{% else %}
+			<div>Aucun commentaire actuellement</div>
+		{% endif %}
+	</section>
+	<section id="addComment">
+		<h3>Ajouter un commentaire</h3>
+		{% include "PersoBlogBundle:Default:form-comment.html.twig" %}
+	</section>
+
+{% endblock %}

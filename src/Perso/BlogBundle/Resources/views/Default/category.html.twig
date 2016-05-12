@@ -1,0 +1,29 @@
+{# src/Perso/BlogBundle/Resources/view/Default/category.html.twig #}
+
+
+{% extends "PersoBlogBundle:Default:index.html.twig" %}
+
+{% block title %}
+  {{ parent() }} - {{ nameCategory }}
+{% endblock %}
+
+{% block breadcrumb %}
+  {{ parent() }}
+  <li class="active">Catégorie {{ nameCategory }}</li>
+{% endblock %}
+
+{% block blog %}
+
+<h2>Catégorie "{{ nameCategory }}"</h2>
+
+  {% for article in listArticles %}
+  	<article class="domaine">
+		<div class="title"><a href="{{ path('perso_blog_article', {'slug' : article.slug }) }}" title="{{ article.title }}">{{ article.title }}</a></div>
+		<div class="info"><span class="label label-default"><span class="glyphicon glyphicon-pencil"></span> Par {{ article.author }}, le {{ article.datecreate|date('d/m/Y') }}</span> <a href="{{ path('perso_blog_article', {'slug' : article.slug }) }}" title="{{ article.title }}"><span class="label label-default"><span class="glyphicon glyphicon-comment"></span> {{ article.getNbComments }} commentaire(s)</span></a></div>
+        <div class="description">{{ article.content|raw }}</div>
+		<div></div>
+	</article>
+	
+  {% endfor %}
+
+{% endblock %}

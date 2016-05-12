@@ -1,0 +1,32 @@
+{# src/Perso/BlogBundle/Resources/view/Default/category.html.twig #}
+
+
+{% extends "PersoBlogBundle:Admin:index.html.twig" %}
+
+{% block title %}
+  {{ parent() }} - Supprimer un commentaire
+{% endblock %}
+
+{% block breadcrumb %}
+  {{ parent() }}
+  <li><a href="{{ path('perso_blog_admin_comments') }}" title="Administration des commentaires">Commentaires</a></li><li class="active">Supprimer un commentaire</li>
+{% endblock %}
+
+{% block blog %}
+
+<h2>Supprimer un commentaire</h2>
+
+	<div class="alert alert-warning" role="alert"><strong>Attention !</strong> Etes vous certain de vouloir supprimer définitivement le commentaire de <strong>{{comment.author}}</strong> ?</div>
+
+  <form action="{{ path('perso_blog_comment_delete', {'id': comment.id}) }}" method="post">
+    <a href="{{ path('perso_blog_admin_comments') }}" class="btn btn-default">
+      <i class="glyphicon glyphicon-chevron-left"></i>
+      Administration des commentaires
+    </a>
+    {# Ici j'ai écrit le bouton de soumission à la main #}
+    <input type="submit" value="Supprimer" class="btn btn-danger" />
+    {# Ceci va générer le champ CSRF #}
+    {{ form_rest(form) }}
+  </form>
+
+{% endblock %}

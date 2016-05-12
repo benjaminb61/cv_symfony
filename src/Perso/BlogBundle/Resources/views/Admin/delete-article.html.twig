@@ -1,0 +1,32 @@
+{# src/Perso/BlogBundle/Resources/view/Default/category.html.twig #}
+
+
+{% extends "PersoBlogBundle:Admin:index.html.twig" %}
+
+{% block title %}
+  {{ parent() }} - Supprimer un article
+{% endblock %}
+
+{% block breadcrumb %}
+  {{ parent() }}
+  <li><a href="{{ path('perso_blog_admin_articles') }}" title="Administration des articles">Articles</a></li><li class="active">Supprimer un article</li>
+{% endblock %}
+
+{% block blog %}
+
+<h2>Supprimer un article</h2>
+
+	<div class="alert alert-warning" role="alert"><strong>Attention !</strong> Etes vous certain de vouloir supprimer l'article <strong>{{article.title}}</strong> ? l'article et ses commentaires seront définitivement supprimés.</div>
+
+  <form action="{{ path('perso_blog_article_delete', {'id': article.id}) }}" method="post">
+    <a href="{{ path('perso_blog_admin_articles') }}" class="btn btn-default">
+      <i class="glyphicon glyphicon-chevron-left"></i>
+      Administration des articles
+    </a>
+    {# Ici j'ai écrit le bouton de soumission à la main #}
+    <input type="submit" value="Supprimer" class="btn btn-danger" />
+    {# Ceci va générer le champ CSRF #}
+    {{ form_rest(form) }}
+  </form>
+
+{% endblock %}

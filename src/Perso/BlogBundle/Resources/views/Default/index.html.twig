@@ -1,0 +1,38 @@
+{# src/Perso/BlogBundle/Resources/view/Default/index.html.twig #}
+
+
+{% extends "PersoBlogBundle::layout.html.twig" %}
+
+{% block title %}
+  {{ parent() }}
+{% endblock %}
+
+
+{% block breadcrumb %}
+  <li><a href="{{ path('perso_core_homepage') }}" title="Benjamin Barbin">Index</a></li>
+  <li class="active"><a href="{{ path('perso_blog_homepage') }}" title="Blog">Blog</a></li>
+{% endblock %}
+
+{% block blog %}
+<h2>Le blog...</h2>
+
+  {% for article in listArticles %}
+  	<article class="domaine">
+		<div class="title"><a href="{{ path('perso_blog_article', {'slug' : article.slug }) }}" title="{{ article.title }}">{{ article.title }}</a></div>
+		<div class="info"><span class="label label-default"><span class="glyphicon glyphicon-pencil"></span> Par {{ article.author }}, le {{ article.datecreate|date('d/m/Y') }}</span> <a href="{{ path('perso_blog_article', {'slug' : article.slug }) }}" title="{{ article.title }}"><span class="label label-default"><span class="glyphicon glyphicon-comment"></span> {{ article.getNbComments }} commentaire(s)</span></a></div>
+        <div class="description">{{ article.content|raw }}</div>
+		<div></div>
+	</article>
+	
+  {% endfor %}
+  
+	<ul class="pagination">
+	  {# On utilise la fonction range(a, b) qui crée un tableau de valeurs entre a et b #}
+	  {% for p in range(1, nbPages) %}
+		<li{% if p == page %} class="active"{% endif %}>
+		  <a href="{{ path('perso_blog_homepage', {'page': p}) }}">{{ p }}</a>
+		</li>
+	  {% endfor %}
+	</ul>
+
+{% endblock %}

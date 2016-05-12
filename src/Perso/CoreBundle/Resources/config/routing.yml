@@ -1,0 +1,23 @@
+perso_core_homepage:
+    pattern:  /{_locale}/
+    defaults: { _controller: PersoCoreBundle:Core:index }
+    requirements:
+        _locale: en|fr # les locales disponibles, séparées par des pipes « | »
+
+perso_core_homepage_arrival:
+    pattern:  /
+    defaults: { _controller: PersoCoreBundle:Core:index }
+
+perso_core_tracking:
+    pattern:  /track/{tag}
+    defaults: { _controller: PersoCoreBundle:Core:track }
+
+login:
+    pattern:   /login
+    defaults:  { _controller: PersoUserBundle:Security:login }
+
+login_check:
+    pattern:   /login_check
+
+logout:
+    pattern:   /logout

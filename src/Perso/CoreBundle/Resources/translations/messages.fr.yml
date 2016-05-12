@@ -1,0 +1,58 @@
+perso:
+    core:
+        navbar:
+            competence: Compétences
+            experience: Expériences
+            formation : Formations
+            contact: Contact
+            blog: Blog
+        cv:
+            h2:
+                competence: Compétences Générales
+                experience: Expériences Professionnelles
+                formation: Formations & Diplômes
+                lecture: Lectures associées
+                contact: Contact
+                apropos: A propos de cette page ?
+            content:
+                competence:
+                    introduction: Mon parcours de formation, mon expérience et ma veille technologique permanente m'ont permis d'acquérir des compétences dans le domaine du (Web) Marketing, du management et du développement. Ces trois domaines de compétences me permettent de mettre en place des stratégies marketing / web-marketing réalistes en tenant compte des contraintes de développement, de positionnement et de gestion propres à chaque projet.
+                    title:
+                        marketing: Web-Marketing & Marketing
+                        management: Gestion & Management
+                        developpement: Informatique & Développement
+                    marketing: Mise en place d'une stratégie marketing et web-marketing en fonction du positionnement de l'entreprise. Maitrîse des outils Google (<a data-toggle="tooltip" href="#" title="Outils Google permettant la création et gestion de publicité en ligne">Adwords</a>, <a data-toggle="tooltip" href="#" title="Outils Google permettant notamment le suivi de son référencement">Webmaster Tools</a>...), du référencement Web (<a data-toggle="tooltip" href="#" title="Search Engine Optimization : référencement naturel">SEO</a>, <a data-toggle="tooltip" href="#" title="Search Engine Advertising : référencement payant">SEA</a>) et des différents leviers d'acquisition (mailing, affiliation...).
+                    management: Gestion et management des équipes, décisions stratégiques et opérationnelles. Mise en place des indicateurs clefs de perfomance et suivi rigoureux des objectifs visés. Analyse des soldes intermédiaires de gestion (SIG).
+                    developpement: Développement web avec les langages HTML, CSS, PHP. Création de site e-commerce. Utilisation des <a data-toggle="tooltip" href="#" title="Boite à outils du développeur qui permet un gain de temps et la création de projet plus ambitieux">frameworks</a> Bootstrap et Symfony. Maitrise des logiciels Dreamweaver, Excel, Word, Access. Connaissance des logiciels Photoshop et InDesign.
+                experience:
+                    za:
+                        date: 6 ans / Septembre 2008 - Janvier 2015
+                        title: Zone Aquatique - Développeur & Dirigeant de l'entreprise
+                        introduction: Zone Aquatique est une entreprise e-commerce que j'ai créé en 2008. Elle est spécialisée dans la vente par correspondance de matériels et accessoires pour aquarium et bassin de jardin. J'ai cédée cette entreprise à un magasin indépendant suite à une belle opportunité au début de l'année 2015 lorsque son chiffre d'affaires était de 1.9M d'euros (4 salariés).<br /></p><p class="description_valeur">De la création du site e-commerce (sans base open-source) aux démarches administratives et juridiques liées à l'activité, du positionnement de la marque et des produits à la stratégie marketing, ou encore de la mise en place de procédures au management de l'équipe, Zone Aquatique m'a permis d'acquérir de solides et multitudes compétences sur le terrain :
+                        detail: <strong>Création de projet :</strong> Rédaction de statuts, étude de marché, définition d'une stratégie commerciale : positionnement de Zone Aquatique en accord avec les exigences du marché et de la concurrence. Recherche de fournisseurs français et étrangers et partenaires commerciaux. Recrutement et gestion de personnel (4 personnes).</p><p class="description"><strong>Marketing & Web-Marketing :</strong> Définition d'une stratégie marketing (segmentation du marché, positionnement de la marque et des produits). Recherche et sélection de nouveaux produits en accord avec le positionnement, négociation avec les fournisseurs, mise en place d'actions et communications commerciales, utilisation des différents leviers d'acquisition (mailing, SEO, SEA...), supervision du designer pour les productions graphiques, veille commerciale et juridique.</p><p class="description"><strong>Gestion :</strong> Analyse et suivi des performances : définition de KPIs, reporting, analyse de bilan (SIG, ratio). Utilisation de métriques spécifiques au e-commerce : taux de rebond, taux de conversions...</p><p class="description"><strong>Informatique :</strong> Création de site internet (PHP, HTML, CSS, Javascript), Manipulation et création de base de données (Mysql), utilisation des outils Google spécifiques aux webmasters (Analytics, Adwords, Webmaster Tools, Merchant Center), Création d'éléments graphiques (Photoshop, InDesign), référencement naturel et commercial sur internet (SEO, SEM).</p><p class="description"><strong>Relation clientèle :</strong> Gestion des réclamations clients par téléphone et par email, conseils et assistance, animation de la communauté sur les réseaux sociaux.
+
+                formation:
+                    master:
+                        date: 2015 - 2016 IN PROGRESS... / IAE de Nantes (44)
+                        title: Master Management des entreprises
+                        description: Le Master Management Double Competence permet d'acquérir de solides compétences dans le domaine de la gestion d'entreprise (analyse financière, contrôle de gestion, droit des affaires, droit du travail, gestion comptable, gestion des achats) et dans la gestion et conduite de projet.
+                    bts:
+                        date: 2010 - 2011 / Lycée Guy Môquet (44)
+                        title: BTS Assistant de Gestion PME - PMI
+                        description: L'assistant de gestion est le véritable bras droit du chef d'entreprise : droit du travail, droit des affaires, organisation générale et communication, économie et management d'entreprise, anglais appliqué aux affaires et au commerce, stages pratiques (8 semaines). Ce diplôme au référentiel commun européen permet d'acquérir de solides compétences sur le monde de l'entreprise.
+                    bac:
+                        date: 2008 - 2009 / Lycée De l'Erdre (44)
+                        title: Bac Pro vente, spécialisation animalerie
+                        description: Les bases importantes du commerce et de la vente : méthodes de vente et canaux de distribution, formes juridiques et comptabilité, organisation et communication.
+
+                contact:
+                    nom: Votre nom
+                    email: Votre email
+                    message: Votre message
+                    agrandissement: Vous pouvez agrandir la fenêtre
+                about:
+                    title: Site internet responsive !
+                    description: Ce site Web a été développé de manière responsive grâce au Framework Bootstrap et à la librairie JQuery. Il utilise également le populaire Framework php Symfony 2. La page sur laquelle vous surfez répond aux dernières exigences du Web - ainsi qu'aux standards W3C HTML5 - et est donc compatible avec toutes les tailles d'écrans, du smartphone à l'ordinateur de bureau.
+        footer:
+            realisation: Réalisation et développement par 
+            contact: Me contacter

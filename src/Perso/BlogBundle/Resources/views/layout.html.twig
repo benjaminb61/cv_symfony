@@ -1,0 +1,29 @@
+{# src/Perso/BlogBundle/Resources/view/Default/layout.html.twig #}
+
+
+{% extends "PersoCoreBundle::layout.html.twig" %}
+
+{% block title %}
+  {{ parent() }} - Blog
+{% endblock %}
+
+{% block body %}
+
+<ol class="breadcrumb">
+{% block breadcrumb %}
+  <li><a href="{{ path('perso_core_homepage') }}" title="Benjamin Barbin">Index</a></li>
+  <li class="active"><a href="{{ path('perso_blog_homepage') }}" title="Blog">Blog</a></li>
+{% endblock %}
+</ol>
+
+<section class="rows">
+	<aside class="col-lg-3" id="blog_menu">
+		{{ render(controller("PersoBlogBundle:Blog:menu")) }} 
+	</aside>
+	<section class="col-lg-9">
+		{% block blog %}
+		{% endblock %}
+	</section>
+</section>
+
+{% endblock %}

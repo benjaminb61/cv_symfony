@@ -1,0 +1,7 @@
+perso_cv_homepage:
+    pattern:  /hello
+    defaults: { _controller: PersoCvBundle:Cv:index }
+
+perso_cv_page1:
+    pattern:  /page/{name}
+    defaults: { _controller: PersoCvBundle:Cv:page, name: page1 }

@@ -1,0 +1,21 @@
+{# src/Perso/BlogBundle/Resources/view/Default/category.html.twig #}
+
+
+{% extends "PersoBlogBundle:Admin:index.html.twig" %}
+
+{% block title %}
+  {{ parent() }} - Modifier un commentaire
+{% endblock %}
+
+{% block breadcrumb %}
+  {{ parent() }}
+  <li><a href="{{ path('perso_blog_admin_comments') }}" title="Administration des commentaires">Commentaires</a></li><li class="active">Modifier un commentaire</li>
+{% endblock %}
+
+{% block blog %}
+
+<h2>Modifier un commentaire</h2>
+
+{% include "PersoBlogBundle:Default:form-comment.html.twig" %}
+
+{% endblock %}

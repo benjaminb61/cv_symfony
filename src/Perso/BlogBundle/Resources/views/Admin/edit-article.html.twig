@@ -1,0 +1,21 @@
+{# src/Perso/BlogBundle/Resources/view/Default/category.html.twig #}
+
+
+{% extends "PersoBlogBundle:Admin:index.html.twig" %}
+
+{% block title %}
+  {{ parent() }} - Modifier un article
+{% endblock %}
+
+{% block breadcrumb %}
+  {{ parent() }}
+  <li><a href="{{ path('perso_blog_admin_articles') }}" title="Administration des articles">Articles</a></li><li class="active">Modifier un article</li>
+{% endblock %}
+
+{% block blog %}
+
+<h2>Modifier un article</h2>
+
+{% include "PersoBlogBundle:Admin:form-article.html.twig" %}
+
+{% endblock %}

@@ -1,0 +1,74 @@
+perso_blog_homepage:
+    pattern:  /blog/{page}
+    defaults: { _controller: PersoBlogBundle:Blog:index, page: 1 }
+    requirements:
+        page: \d*
+
+perso_blog_category:
+    pattern:  /blog/category/{name}
+    defaults: { _controller: PersoBlogBundle:Blog:category }
+
+perso_blog_article:
+    pattern:  /blog/article/{slug}
+    defaults: { _controller: PersoBlogBundle:Article:view }
+
+perso_blog_comment_edit:
+    pattern:  /blog/admin/comment/edit/{id}
+    defaults: { _controller: PersoBlogBundle:Comment:edit }
+    requirements:
+        id: \d*
+
+perso_blog_comment_delete:
+    pattern:  /blog/admin/comment/delete/{id}
+    defaults: { _controller: PersoBlogBundle:Comment:delete }
+    requirements:
+        id: \d*
+
+perso_blog_admin:
+    pattern:  /blog/admin/
+    defaults: { _controller: PersoBlogBundle:Blog:admin }
+
+perso_blog_admin_articles:
+    pattern:  /blog/admin/articles/{page}
+    defaults: { _controller: PersoBlogBundle:Article:admin, page: 1 }
+    requirements:
+        page: \d*
+
+perso_blog_article_add:
+    pattern:  /blog/admin/article/add/
+    defaults: { _controller: PersoBlogBundle:Article:add }
+
+perso_blog_article_edit:
+    pattern:  /blog/admin/article/edit/{id}
+    defaults: { _controller: PersoBlogBundle:Article:edit }
+    requirements:
+        id: \d*
+
+perso_blog_article_delete:
+    pattern:  /blog/admin/article/delete/{id}
+    defaults: { _controller: PersoBlogBundle:Article:delete }
+    requirements:
+        id: \d*
+
+perso_blog_admin_comments:
+    pattern:  /blog/admin/comments/{page}
+    defaults: { _controller: PersoBlogBundle:Comment:admin, page: 1 }
+    requirements:
+        page: \d*
+perso_blog_comment_edit:
+    pattern:  /blog/admin/comment/edit/{id}
+    defaults: { _controller: PersoBlogBundle:Comment:edit }
+    requirements:
+        id: \d*
+
+perso_blog_comment_delete:
+    pattern:  /blog/admin/comment/delete/{id}
+    defaults: { _controller: PersoBlogBundle:Comment:delete }
+    requirements:
+        id: \d*
+
+perso_blog_admin_categories:
+    pattern:  /blog/admin/categories/{page}
+    defaults: { _controller: PersoBlogBundle:Category:admin, page: 1 }
+    requirements:
+        page: \d*

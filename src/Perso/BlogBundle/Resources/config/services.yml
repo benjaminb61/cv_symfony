@@ -1,0 +1,6 @@
+services:
+    perso_blog.antispam:
+        class:     Perso\BlogBundle\Antispam\BlogAntispam
+        arguments: [@mailer, %locale%, 50]
+        tags:
+            -  { name: twig.extension }

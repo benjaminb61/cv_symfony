@@ -1,0 +1,17 @@
+{# src/Perso/BlogBundle/Resources/views/Default/menu.html.twig #}
+
+<h3>Catégories...</h3>
+<ul class="nav nav-pills nav-stacked">
+ 
+  {% for category in listCategories %}
+  
+	<li>
+      <a href="{{ path('perso_blog_category', {'name': category.name}) }}">
+
+        {{ category.name }}
+      </a>
+    </li>
+	
+  {% endfor %}
+
+</ul>

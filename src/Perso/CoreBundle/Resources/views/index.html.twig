@@ -1,0 +1,171 @@
+{# src/Perso/CoreBundle/Resources/view/index.html.twig #}
+
+
+{% extends "PersoCoreBundle::layout.html.twig" %}
+
+{% block title %}
+  {{ parent() }} - CV en ligne
+{% endblock %}
+
+{% block body %}
+
+		
+		<!--
+        ======================== Compétences générales =======================
+        -->
+		
+		<section class="rows">
+        	<section class="titre_logo col-lg-12">
+            	<img class="hidden-xs" src="{{ asset('bundles/perso/images/titres/competences.png') }}" alt="Competence">
+                <h2 id="competence">{{ 'perso.core.cv.h2.competence'|trans }}</h2>
+            </section>
+            
+				<!--  Ligne 1  -->
+                <section>
+                	<p class="col-lg-12 description_valeur">{{ 'perso.core.cv.content.competence.introduction'|trans }}</p>
+                    <section class="domaine col-lg-4 col-md-4 col-sm-6">
+                        <p class="title">{{ 'perso.core.cv.content.competence.title.marketing'|trans }}</p>
+                        <p class="description">{{ 'perso.core.cv.content.competence.marketing'|trans|raw }}</p>
+                    </section>
+                    <section class="domaine col-lg-4 col-md-4 col-sm-6">
+                        <p class="title">{{ 'perso.core.cv.content.competence.title.management'|trans }}</p>
+                        <p class="description">{{ 'perso.core.cv.content.competence.management'|trans|raw }}</p>
+                    </section>
+                    <section class="domaine col-lg-4 col-md-4 col-sm-6">
+                        <p class="title">{{ 'perso.core.cv.content.competence.title.developpement'|trans }}</p>
+                        <p class="description">{{ 'perso.core.cv.content.competence.developpement'|trans|raw }}</p>
+                    </section>
+                </section>
+                
+        </section>
+        
+        <!--
+        ======================== Expériences professionnelles =======================
+        -->
+        
+		<section class="rows">
+        	<section class="titre_logo col-lg-12">
+            	<img class="hidden-xs" src="{{ asset('bundles/perso/images/titres/experiences_pro.png') }}" alt="Expériences">
+                <h2 id="experience">{{ 'perso.core.cv.h2.experience'|trans }}</h2>
+            </section>
+			<section class="domaine col-lg-3 col-xs-4">
+            	<img class="img-thumbnail" src="{{ asset('bundles/perso/images/experiences/za_final_hp_light.jpg') }}" alt="photo">
+			</section>
+			<section class="domaine col-lg-9">
+                <p><span class="label label-default">{{ 'perso.core.cv.content.experience.za.date'|trans }}</span></p>
+				<p class="title">{{ 'perso.core.cv.content.experience.za.title'|trans }}</p>
+                <p class="description"><p class="description_valeur">{{ 'perso.core.cv.content.experience.za.introduction'|trans|raw }}</p><p class="description">{{ 'perso.core.cv.content.experience.za.detail'|trans|raw }}</p>
+			</section>
+        </section>
+        
+        <!--
+        ======================== Formations et diplômes =======================
+        -->
+        
+		<section class="rows">
+        	<section class="titre_logo col-lg-12">
+            	<img class="hidden-xs" src="{{ asset('bundles/perso/images/titres/formations.png') }}" alt="Formations">
+                <h2 id="formation">{{ 'perso.core.cv.h2.formation'|trans }}</h2>
+            </section>
+
+			<section class="domaine col-lg-12"> 
+            	<p><span class="label label-default">{{ 'perso.core.cv.content.formation.master.date'|trans }}</span></p>
+				<p class="title">{{ 'perso.core.cv.content.formation.master.title'|trans }}</p>
+                <p class="description">{{ 'perso.core.cv.content.formation.master.description'|trans }}</p>
+			</section>
+			<section class="domaine col-lg-12"> 
+            	<p><span class="label label-default">{{ 'perso.core.cv.content.formation.bts.date'|trans }}</span></p>
+				<p class="title">{{ 'perso.core.cv.content.formation.bts.title'|trans }}</p>
+                <p class="description">{{ 'perso.core.cv.content.formation.bts.description'|trans }}</p>
+			</section>
+			<section class="domaine col-lg-12"> 
+            	<p><span class="label label-default">{{ 'perso.core.cv.content.formation.bac.date'|trans }}</span></p>
+				<p class="title">{{ 'perso.core.cv.content.formation.bac.title'|trans }}</p>
+                <p class="description">{{ 'perso.core.cv.content.formation.bac.description'|trans }}</p>
+			</section>
+            
+			<section class="domaine col-lg-4"> 
+            	<p><span class="label label-warning">2015 / OpenClassrooms (75)</span></p>
+				<p class="title">Certification Développeur Web</p>
+                <p class="description">Le parcours "Développeur Web" proposé par la société OpenClassrooms certifie les connaissances sur les langages PHP, HTML5, CSS3, MYSQL  ainsi que sur le Framework Symfony.</p>
+			</section>
+            <section class="domaine col-lg-4"> 
+            	<p><span class="label label-warning">2015 / OpenClassrooms (75)</span></p>
+				<p class="title">Certification Intégrateur Web</p>
+                <p class="description">Le parcours "Intégrateur Web" proposé par la société OpenClassrooms certifie les connaissances sur les langages HTML5 et CSS3 ainsi que sur le Framework Bootstrap.</p>
+			</section>
+            <section class="domaine col-lg-4"> 
+            	<p><span class="label label-warning">2011 / Ranking Metrics (75)</span></p>
+				<p class="title">Formation Référencement Web SEO</p>
+                <p class="description">Ranking Metrics est un organisme de formation au référencement et webmarketing, créé par Olivier Duffez (WebRankInfo) et Fabien Facériès et Antoine Chiarelli (AgentWebRanking).</p>
+			</section>     
+            <section class="jumbotron col-lg-12" id="jumbotron-book">
+            	<div class="container-fluid row">
+                    <section class="titre_logo col-lg-12">
+                    	<img src="{{ asset('bundles/perso/images/titres/formations.png') }}" alt="Formations">
+                        <h3>{{ 'perso.core.cv.h2.lecture'|trans }}</h3>
+                    </section>
+                    
+                    <section class="domaine col-lg-2 col-sm-3 hidden-xs">
+                        <img class="img-thumbnail" src="{{ asset('bundles/perso/images/livre_oceanbleu.jpg') }}" alt="La stratégie de l'océan bleu" title="La stratégie de l'océan bleu">
+                    </section>
+                    <section class="domaine col-lg-10 col-sm-9"> 
+                        <p class="title">La stratégie de l'océan bleu<br /><small><i>(René Mauborgne, W. Chan Kim)</i></small></p>
+                        <p class="description">Livre ayant rencontré un franc succès dans le milieu du marketing ! Il préconise de s'isoler de la concurrence par la création d'une nouvelle chaine de valeurs aux caractéristiques différentes (le canevas stratégique) : vous serez alors dans <a data-toggle="tooltip" href="#" title="Nouvel espace stratégique peu concurrentiel">"l'océan bleu"</a>. Les auteurs vont donc beaucoup plus loin que la simple stratégie de différenciation dans un milieu fortement concurrentiel, appelé <a data-toggle="tooltip" href="#" title="Espace stratégique fortement concurrentiel">"l'océan rouge"</a>.</p>
+                    </section>
+                    
+                    <section class="domaine col-lg-2 col-sm-3 hidden-xs">
+                        <img class="img-thumbnail" src="{{ asset('bundles/perso/images/livre_marketing.jpg') }}" alt="Marketing Managemet" title="Marketing Management">
+                    </section>
+                    <section class="domaine col-lg-10 col-sm-9"> 
+                        <p class="title">Marketing Management<br /><small><i>(Philip Kotler, Kevin Keller)</i></small></p>
+                        <p class="description">Véritable guide de référence pour une immersion complète dans le domaine du marketing. Il aborde notamment des problématiques marketing plus que jamais d'actualité : influence du Web 2.0 sur la pratique du marketing (commerce en ligne et sur mobile), mise en place d'un marketing responsable au plan sociétal, stratégies marketing en temps de crise.</p>
+                    </section> 
+            	</div>
+            </section>
+        </section>
+          
+          <br /><br />
+
+        
+        <!--
+        ======================== Contact =======================
+        -->
+
+    	<section class="row">
+        	<section class="col-sm-6">
+            	<form name="contact" method="post" class="formulaire" action="{{ path('perso_core_homepage') }}">
+                    <section class="titre_logo">
+                        <img class="hidden-xs" src="{{ asset('bundles/perso/images/titres/contact.png') }}" alt="contact">
+                        <h2 id="contact">{{ 'perso.core.cv.h2.contact'|trans }}</h2>
+                    </section>
+                    <div class="form-group">
+                      <label for="name">{{ 'perso.core.cv.content.contact.nom'|trans }} : </label>
+                      <input id="name" type="text" class="form-control" name="name" placeholder="{{ 'perso.core.cv.content.contact.nom'|trans }}">
+                    </div>
+                    <div class="form-group">
+                      <label for="email">{{ 'perso.core.cv.content.contact.email'|trans }} : </label>
+                      <input id="email" type="text" class="form-control" name="email" placeholder="{{ 'perso.core.cv.content.contact.email'|trans }}">
+                    </div>
+                    <div class="form-group">
+                      <label for="message">{{ 'perso.core.cv.content.contact.message'|trans }} : </label>
+                      <textarea placeholder="{{ 'perso.core.cv.content.contact.message'|trans }}" id="message" class="form-control" name="message"></textarea>
+                      <p class="help-block">{{ 'perso.core.cv.content.contact.agrandissement'|trans }}</p>
+                    </div>
+                    <button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;Envoyer</button>
+                </form>
+            </section>
+            <section class="col-sm-6 col-sm-offset-0">
+            	<div class="container-fluid">
+                	<section class="titre_logo">
+                        <h2>{{ 'perso.core.cv.h2.apropos'|trans }}</h2>
+                    </section>
+                    <section class="domaine"> 
+                        <p class="title">{{ 'perso.core.cv.content.about.title'|trans }}</p>
+                        <p class="description">{{ 'perso.core.cv.content.about.description'|trans }}</p>
+                    </section> 
+               	</div>
+            </section>
+        </section>
+
+{% endblock %}

@@ -1,0 +1,61 @@
+{# src/Perso/BlogBundle/Resources/view/Default/category.html.twig #}
+
+
+{% extends "PersoBlogBundle:Admin:index.html.twig" %}
+
+{% block title %}
+  {{ parent() }} - Modifier un article
+{% endblock %}
+
+{% block breadcrumb %}
+  {{ parent() }}
+  <li class="active">Article</li>
+{% endblock %}
+
+{% block blog %}
+	<h2>Administration des articles</h2>
+	<div class="pull-right"><a href="{{ path('perso_blog_article_add') }}" class="btn btn-success" title="Ajouter un article">Ajouter un article</a></div>
+	<table class="table table-bordered table-striped">
+	   <thead>
+		  <tr>
+				<th>Statut</th>
+				<th>Date</th>
+				<th>Titre</th>
+				<th>Action</th>
+		  </tr>
+	   </thead>
+	   <tbody>
+	   
+  {% for article in listArticles %}
+  	<tr>
+		<td>{{ article.viewStatut|raw }}</td>
+		<td>
+			Par {{ article.author }}<br />le {{ article.datecreate|date('d/m/Y') }} à {{ article.datecreate|date('H:m') }}
+			{% if article.dateupdate %}
+				<br /><small><strong>Modifié le {{ article.dateupdate|date('d/m/Y') }} à {{ article.dateupdate|date('H:m') }}</strong></small>
+			{% endif %}
+		</td>
+		<td>
+			<a href="{{ path('perso_blog_article_edit', {'id' : article.id }) }}" title="Modifier">{{ article.title }}</a><br />
+			<small>{{ article.getNbComments }} commentaire(s)</small></td>
+		<td>
+			<a href="{{ path('perso_blog_article',{'slug' : article.slug }) }}" class="btn btn-success btn-xs" title="Voir sur le blog" target="_blank"><span class="glyphicon glyphicon-search"></span></a>
+			<a href="{{ path('perso_blog_article_edit',{'id' : article.id }) }}" class="btn btn-warning btn-xs" title="Modifier"><span class="glyphicon glyphicon-pencil"></span></a>
+			<a href="{{ path('perso_blog_article_delete',{'id' : article.id }) }}" class="btn btn-danger btn-xs" title="Supprimer"><span class="glyphicon glyphicon-remove"></span></a></td>
+	</tr>
+	
+  {% endfor %}
+  
+     </tbody>
+	</table>
+  
+	<ul class="pagination">
+	  {# On utilise la fonction range(a, b) qui crée un tableau de valeurs entre a et b #}
+	  {% for p in range(1, nbPages) %}
+		<li{% if p == page %} class="active"{% endif %}>
+		  <a href="{{ path('perso_blog_admin_articles', {'page': p}) }}">{{ p }}</a>
+		</li>
+	  {% endfor %}
+	</ul>
+
+{% endblock %}

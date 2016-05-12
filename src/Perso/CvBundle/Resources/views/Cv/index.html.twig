@@ -1,0 +1,174 @@
+{# src/Perso/CvBundle/Resources/view/Cv/view.html.twig #}
+
+
+{% extends "PersoCvBundle::layout.html.twig" %}
+
+{% block title %}
+  {{ parent() }} - CV en ligne
+{% endblock %}
+
+{% block body %}
+
+        
+		{% for message in app.session.flashbag.get('msg_success') %}
+	
+			<div class="alert alert-success" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>{{ message|raw }} </div>
+	
+		{% endfor %}
+		
+		<!--
+        ======================== Compétences générales =======================
+        -->
+		
+		<section class="rows">
+        	<section class="titre_logo col-lg-12">
+            	<img class="hidden-xs" src="{{ asset('bundles/perso/images/titres/competences.png') }}" alt="Competence">
+                <h3 id="competence">Compétences générales</h3>
+            </section>
+            
+				<!--  Ligne 1  -->
+                <section>
+                	<p class="col-lg-12 description_valeur">Mon parcours de formation, mon expérience et ma veille technologique permanente m'ont permis d'acquérir des compétences dans le domaine du (Web) Marketing, du management et du développement. Ces trois domaines de compétences me permettent de mettre en place des stratégies marketing / web-marketing réalistes en tenant compte des contraintes de développement, de positionnement et de gestion propres à chaque projet.</p>
+                    <section class="domaine col-lg-4 col-md-4 col-sm-6">
+                        <p class="title">Web-Marketing & Marketing</p>
+                        <p class="description">Mise en place d'une stratégie marketing en fonction du positionnement de l'entreprise. Maitrîse des outils Google (<a data-toggle="tooltip" href="#" title="Outils Google permettant la création et gestion de publicité en ligne">Adwords</a>, <a data-toggle="tooltip" href="#" title="Outils Google permettant notamment le suivi de son référencement">Webmaster Tools</a>...), du référencement Web (<a data-toggle="tooltip" href="#" title="Search Engine Optimization : référencement naturel">SEO</a>, <a data-toggle="tooltip" href="#" title="Search Engine Advertising : référencement payant">SEA</a>) et des bonnes pratiques actuelles.</p>
+                    </section>
+                    <section class="domaine col-lg-4 col-md-4 col-sm-6">
+                        <p class="title">Gestion & Management</p>
+                        <p class="description">Décision stratégique et opérationnelle de l'entreprise et gestion des équipes. Mise en place des indicateurs clefs de perfomance et suivi rigoureux des objectifs visés. Analyse des soldes intermédiaires de gestion (SIG).</p>
+                    </section>
+                    <section class="domaine col-lg-4 col-md-4 col-sm-6">
+                        <p class="title">Informatique & développement</p>
+                        <p class="description">Développement web avec les langages HTML, CSS, PHP. Création de site e-commerce. Utilisation des <a data-toggle="tooltip" href="#" title="Boite à outils du développeur qui permet un gain de temps et la création de projet plus ambitieux">frameworks</a> Bootstrap et Symfony. Maitrise des logiciels Dreamweaver, Excel, Word, Access. Connaissance des logiciels Photoshop et InDesign.</p>
+                    </section>
+                </section>
+                
+        </section>
+        
+        <!--
+        ======================== Expériences professionnelles =======================
+        -->
+        
+		<section class="rows">
+        	<section class="titre_logo col-lg-12">
+            	<img class="hidden-xs" src="{{ asset('bundles/perso/images/titres/experiences_pro.png') }}" alt="Expériences">
+                <h3 id="experience">Expériences professionnelles</h3>
+            </section>
+			<section class="domaine col-lg-3 col-xs-4">
+            	<img class="img-thumbnail" src="{{ asset('bundles/perso/images/experiences/za_final_hp_light.jpg') }}" alt="photo">
+			</section>
+			<section class="domaine col-lg-9">
+                <p><span class="label label-default">6 ans / Septembre 2008 - Janvier 2015</span></p>
+				<p class="title">Zone Aquatique - Dirigeant de l'entreprise</p>
+                <p class="description"><p class="description_valeur">Zone Aquatique est une entreprise e-commerce que j'ai créé en 2008. Elle est spécialisée dans la vente par correspondance de matériels et accessoires pour aquarium et bassin de jardin. J'ai cédée cette entreprise à un magasin indépendant suite à une belle opportunité au début de l'année 2015 lorsque son chiffre d'affaires était de 1.9M d'euros (4 salariés).<br /></p><p class="description_valeur">De la création du site e-commerce (sans base open-source) aux démarches administratives et juridiques liées à l'activité, du positionnement de la marque et des produits à la stratégie marketing, ou encore de la mise en place de procédures au management de l'équipe, Zone Aquatique m'a permis d'acquérir de solides et multitudes compétences sur le terrain :</p><p class="description"><strong>Création de projet :</strong> Rédaction de statuts, étude de marché, définition d'une stratégie commerciale : positionnement de Zone Aquatique en accord avec les exigences du marché et de la concurrence. Recherche de fournisseurs français et étrangers et partenaires commerciaux. Recrutement et gestion de personnel (4 personnes).</p><p class="description"><strong>Marketing :</strong> Définition d'une stratégie marketing (segmentation du marché, positionnement de la marque et des produits). Recherche et sélection de nouveaux produits en accord avec le positionnement, négociation avec les fournisseurs, mise en place d'actions et communications commerciales, supervision du designer pour les productions graphiques, veille commerciale et juridique.</p><p class="description"><strong>Gestion :</strong> Analyse et suivi des performances : définition de KPIs, reporting, analyse de bilan (SIG, ratio). Utilisation de métriques spécifiques au e-commerce : taux de rebond, taux de conversions...</p><p class="description"><strong>Informatique :</strong> Création de site internet (PHP, HTML, CSS, Javascript), Manipulation et création de base de données (Mysql), utilisation des outils Google spécifiques aux webmasters (Analytics, Adwords, Webmaster Tools, Merchant Center), Création d'éléments graphiques (Photoshop, InDesign), référencement naturel et commercial sur internet (SEO, SEM).</p><p class="description"><strong>Relation clientèle :</strong> Gestion des réclamations clients par téléphone et par email, conseils et assistance, animation de la communauté sur les réseaux sociaux.</p>
+			</section>
+        </section>
+        
+        <!--
+        ======================== Formations et diplômes =======================
+        -->
+        
+		<section class="rows">
+        	<section class="titre_logo col-lg-12">
+            	<img class="hidden-xs" src="{{ asset('bundles/perso/images/titres/formations.png') }}" alt="Formations">
+                <h3 id="formation">Formations et Diplômes</h3>
+            </section>
+
+			<section class="domaine col-lg-12"> 
+            	<p><span class="label label-default">2010 - 2011 / Lycée Guy Môquet (44)</span></p>
+				<p class="title">BTS Assistant de Gestion PME - PMI</p>
+                <p class="description">L'assistant de gestion est le véritable bras droit du chef d'entreprise : droit du travail, droit des affaires, organisation générale et communication, économie et management d'entreprise, anglais appliqué aux affaires et au commerce, stages pratiques (8 semaines). Ce diplôme au référentiel commun européen permet d'acquérir de solides compétences sur le monde de l'entreprise.
+</p>
+			</section>
+			<section class="domaine col-lg-12"> 
+            	<p><span class="label label-default">2008 - 2009 / Lycée De l'Erdre (44)</span></p>
+				<p class="title">Bac Pro vente, spécialisation animalerie</p>
+                <p class="description">Les bases importantes du commerce et de la vente : méthodes de vente et canaux de distribution, formes juridiques et comptabilité, organisation et communication.
+</p>
+			</section>
+            
+			<section class="domaine col-lg-4"> 
+            	<p><span class="label label-warning">2015 / OpenClassRooms (75)</span></p>
+				<p class="title">Certification Développeur Web</p>
+                <p class="description">Le parcours "Développeur Web" proposé par la société OpenClassrooms certifie les connaissances sur les langages PHP, HTML5, CSS3, MYSQL  ainsi que sur le Framework Symfony.</p>
+			</section>
+            <section class="domaine col-lg-4"> 
+            	<p><span class="label label-warning">2015 / OpenClassRooms (75)</span></p>
+				<p class="title">Certification Intégrateur Web</p>
+                <p class="description">Le parcours "Intégrateur Web" proposé par la société OpenClassrooms certifie les connaissances sur les langages HTML5 et CSS3 ainsi que sur le Framework Bootstrap.</p>
+			</section>
+            <section class="domaine col-lg-4"> 
+            	<p><span class="label label-warning">2011 / Ranking Metrics (75)</span></p>
+				<p class="title">Formation Référencement Web SEO</p>
+                <p class="description">Ranking Metrics est un organisme de formation au référencement et webmarketing, créé par Olivier Duffez (WebRankInfo) et Fabien Facériès et Antoine Chiarelli (AgentWebRanking).</p>
+			</section>     
+            <section class="jumbotron col-lg-12" id="jumbotron-book">
+            	<div class="container-fluid row">
+                    <section class="titre_logo col-lg-12">
+                    	<img src="{{ asset('bundles/perso/images/titres/formations.png') }}" alt="Formations">
+                        <h3>Lectures associées</h3>
+                    </section>
+                    
+                    <section class="domaine col-lg-2 col-sm-3 hidden-xs">
+                        <img class="img-thumbnail" src="{{ asset('bundles/perso/images/livre_oceanbleu.jpg') }}" alt="La stratégie de l'océan bleu" title="La stratégie de l'océan bleu">
+                    </section>
+                    <section class="domaine col-lg-10 col-sm-9"> 
+                        <p class="title">La stratégie de l'océan bleu<br /><small><i>(René Mauborgne, W. Chan Kim)</i></small></p>
+                        <p class="description">Livre ayant rencontré un franc succès dans le milieu du marketing ! Il préconise de s'isoler de la concurrence par la création d'une nouvelle chaine de valeurs aux caractéristiques différentes (le canevas stratégique) : vous serez alors dans <a data-toggle="tooltip" href="#" title="Nouvel espace stratégique peu concurrentiel">"l'océan bleu"</a>. Les auteurs vont donc beaucoup plus loin que la simple stratégie de différenciation dans un milieu fortement concurrentiel, appelé <a data-toggle="tooltip" href="#" title="Espace stratégique fortement concurrentiel">"l'océan rouge"</a>.</p>
+                    </section>
+                    
+                    <section class="domaine col-lg-2 col-sm-3 hidden-xs">
+                        <img class="img-thumbnail" src="{{ asset('bundles/perso/images/livre_marketing.jpg') }}" alt="Marketing Managemet" title="Marketing Management">
+                    </section>
+                    <section class="domaine col-lg-10 col-sm-9"> 
+                        <p class="title">Marketing Management<br /><small><i>(Philip Kotler, Kevin Keller)</i></small></p>
+                        <p class="description">Véritable guide de référence pour une immersion complète dans le domaine du marketing. Il aborde notamment des problématiques marketing plus que jamais d'actualité : influence du Web 2.0 sur la pratique du marketing (commerce en ligne et sur mobile), mise en place d'un marketing responsable au plan sociétal, stratégies marketing en temps de crise.</p>
+                    </section> 
+            	</div>
+            </section>
+        </section>
+          
+          <br /><br />
+
+        
+        <!--
+        ======================== Contact =======================
+        -->
+
+    	<section class="row">
+        	<section class="col-sm-6">
+            	<form name="contact" method="post" class="formulaire" action="{{ path('perso_cv_homepage') }}">
+                    <section class="titre_logo">
+                        <img class="hidden-xs" src="{{ asset('bundles/perso/images/titres/contact.png') }}" alt="contact">
+                        <h3 id="contact">Contact</h3>
+                    </section>
+                    <div class="form-group">
+                      <label for="name">Votre nom : </label>
+                      <input id="name" type="text" class="form-control" name="name" placeholder="Votre nom">
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Votre email : </label>
+                      <input id="email" type="text" class="form-control" name="email" placeholder="Votre email">
+                    </div>
+                    <div class="form-group">
+                      <label for="message">Votre message : </label>
+                      <textarea placeholder="Votre message" id="message" class="form-control" name="message"></textarea>
+                      <p class="help-block">Vous pouvez agrandir la fenêtre</p>
+                    </div>
+                    <button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;Envoyer</button>
+                </form>
+            </section>
+            <section class="col-sm-6 col-sm-offset-0">
+            	<div class="container-fluid">
+                	<section class="titre_logo">
+                        <h3>A propos de cette page ?</h3>
+                    </section>
+                    <section class="domaine"> 
+                        <p class="title">Site internet responsive !</p>
+                        <p class="description">Ce site Web a été développé de manière responsive grâce au Framework Bootstrap et à la librairie JQuery. La page sur laquelle vous surfez répond aux dernières exigences du Web - ainsi qu'aux standards W3C HTML5 - et est donc compatible avec toutes les tailles d'écrans, du smartphone à l'ordinateur de bureau.</p>
+                    </section> 
+               	</div>
+            </section>
+        </section>
+
+{% endblock %}

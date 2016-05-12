@@ -1,0 +1,13 @@
+parameters:
+#    perso_cv.example.class: Perso\CvBundle\Example
+    perso_cv.contact.email_recipient: benjamin.barbin61@gmail.com
+    perso_cv.contact.subject: Message depuis BenjaminBarbin.fr
+
+services:
+#    perso_cv.example:
+#        class: %perso_cv.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+    perso_cv.contact:
+
+        class: Perso\CvBundle\Contact\CvContact
+        arguments: [@mailer, %locale%, %perso_cv.contact.email_recipient%]

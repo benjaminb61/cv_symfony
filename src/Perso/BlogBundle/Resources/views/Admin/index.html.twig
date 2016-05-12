@@ -1,0 +1,35 @@
+{# src/Perso/BlogBundle/Resources/view/Default/index.html.twig #}
+
+
+{% extends "PersoBlogBundle::layout.html.twig" %}
+
+{% block title %}
+  {{ parent() }}
+{% endblock %}
+
+
+{% block breadcrumb %}
+  <li><a href="{{ path('perso_core_homepage') }}" title="Benjamin Barbin">Index</a></li>
+  <li><a href="{{ path('perso_blog_homepage') }}" title="Blog">Blog</a></li>
+  <li class="active"><a href="{{ path('perso_blog_admin') }}" title="Administration du blog">Admin</a></li>
+{% endblock %}
+
+{% block blog %}
+<h2>Administration du blog</h2>
+
+<section>
+	<div class="btn-group">
+	  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+		<span class="glyphicon glyphicon-duplicate"></span><br />Articles <span class="caret"></span>
+	  </button>
+	  <ul class="dropdown-menu" role="menu">
+		<li><a href="{{ path('perso_blog_admin_articles') }}" title="Administration des articles">Gestion des articles</a></li>
+		<li class="divider"></li>
+		<li><a href="{{ path('perso_blog_article_add') }}" title="Ajouter un article">Ajouter un article</a></li>
+	  </ul>
+	</div>
+	<a href="{{ path('perso_blog_admin_comments') }}" class="btn btn-default" title="Administration des commentaires"><span class="glyphicon glyphicon-comment"></span><br />Commentaires</a>
+	<a href="{{ path('perso_blog_admin_categories') }}" class="btn btn-default" title="Administration des catégories"><span class="glyphicon glyphicon-tag"></span><br />Catégories</a>
+</section>
+
+{% endblock %}

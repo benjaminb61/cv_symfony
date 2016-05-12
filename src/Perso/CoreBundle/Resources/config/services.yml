@@ -1,0 +1,26 @@
+parameters:
+#    perso_core.example.class: Perso\CoreBundle\Example
+    perso_core.contact.email_recipient: benjamin.barbin61@gmail.com
+    perso_core.contact.subject: Message depuis BenjaminBarbin.fr
+
+services:
+#    perso_core.example:
+#        class: %perso_core.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+    perso_core.contact:
+
+        class: Perso\CoreBundle\Contact\CoreContact
+        arguments: [@mailer, %locale%, %perso_core.contact.email_recipient%]
+
+    perso_core.beta.html:
+        class: Perso\CoreBundle\Beta\BetaHTML
+
+#    perso_core.beta.listener:
+#        class: Perso\CoreBundle\Beta\BetaListener
+#        arguments: [@perso_core.beta.html, "2013-10-20"]
+#        tags:
+#            - { name: kernel.event_listener, event: kernel.response, method: processBeta }
+
+    perso_core.tracking:
+        class: Perso\CoreBundle\Tracking\CoreTracking
+        arguments: [@mailer, @doctrine.orm.entity_manager, %perso_core.contact.email_recipient%]

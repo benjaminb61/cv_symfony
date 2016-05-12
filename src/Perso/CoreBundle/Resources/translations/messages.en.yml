@@ -1,0 +1,60 @@
+perso:
+    core:
+        navbar:
+            competence: Skills
+            experience: Experience
+            formation : Trainning
+            contact: Contact
+            blog: Blog
+        cv:
+            h2:
+                competence: General Skills
+                experience: Professional Experience
+                formation: Training & Certifications
+                lecture: Reading related
+                contact: Contact
+                apropos: About this page ?
+            content:
+                competence:
+                    introduction: My training course, my experience and my technology watch allowed me to obtain skills in the Web-Marketing, Management and Web development. These areas of expertise allowed me to develop some realistic marketing or web-marketing strategies in taking account of obstacles development, positioning and specific projects management.
+                    title:
+                        marketing: Web-Marketing & Marketing
+                        management: Management
+                        developpement: Development
+                    marketing: Establishing a marketing strategy in taking account of company positioning. Control Google tools (<a data-toggle="tooltip" href="#" title="Google tools to manage online advertising">Adwords</a>, <a data-toggle="tooltip" href="#" title="Google tools to manage search engine optimization">Webmaster Tools</a>...), <a data-toggle="tooltip" href="#" title="Search Engine Optimization">SEO</a> & <a data-toggle="tooltip" href="#" title="Search Engine Advertising">SEA</a> and good actualy web practises.
+                    management: Strategic and operational decision for company, manage a teamwork. Establishing of key performance indicators, Rigorous monitoring of objectives. Analyze statement balances of company.
+                    developpement: Web development with HTML, CSS and PHP language. Creating e-commerce website. Using Bootstrap and Symfony <a data-toggle="tooltip" href="#" title="Toolbox for developers in order to develop professional websites">frameworks</a>. Control Dreamweaver, Excel, Word, Access, Photoshop, InDesign softwares.
+
+                experience:
+                    za:
+                        date: 6 years / Sept 2008 - Jan 2015
+                        title: Zone Aquatique - CEO
+                        introduction: Zone Aquatique is a e-commerce company founded in 2008. It specializes in the trade of aquarium and pond accessories. I sold this business to a retailer company in 2015 while turnover were to €1.9 M (4 employees).<br /></p><p class="description_valeur">I created a e-commerce website (without open source), I realized administrative and legal steps related to the activity, I control positioning of brand and products with communication and marketing. Zone Aquatique allowed me to obtain a multiple and solid skills on the spot :
+                        detail: <strong>Project creation :</strong> Writing the statutes, market research, defining a business strategy : positioning Zone Aquatique in accordance with the requirements of the market and competitors . Searching French and foreign suppliers and business partners. Recruitment and management employee (4 people).</p><p class="description"><strong>Marketing :</strong> Definition of a marketing strategy (segmentation, brand and products positioning) . Search and selection of new products in accordance with the positioning, negotiation with suppliers, manage commercial and communications actions, supervision of graphic designer for productions , commercial and legal monitoring .</p><p class="description"><strong>Management :</strong> Analysis and monitoring of performance : Key performance indicators, reporting, balance sheet analysis. Using specific metrics to ecommerce : bounce rate, conversion rate ...</p><p class="description"><strong>Development :</strong> Creating website (PHP, HTML, CSS, Javascript ) Managing and creation of database ( MySQL ), use specific Google tools to webmasters (Analytics, Adwords, Webmaster Tools, Merchant Center). Creating graphics (Photoshop, InDesign), natural and commercial internet referencing (SEO, SEA).</p><p class="description"><strong>Customer service :</strong> Managing customer complaints via phone and email, advice and assistance, community management on social networks.
+
+                formation:
+                    master:
+                        date: 2015 - 2016 IN PROGRESS... / IAE Nantes (44)
+                        title: Master Management Double Compétence
+                        description: The Master Double Competence Management allow to obtain solids skills in the business management (financial analyze, labor law, business law, accounting management, orders management) and in project management.
+                    bts:
+                        date: 2010 - 2011 / "Guy Môquet" School (44)
+                        title: High Level Technician (French BTS) - Assistant Management
+                        description: The Management Assistant is the real right arm of the entrepreneur : labor law, business law, general organization and communication, economics and business management, English applied to business and commerce, internship (8 weeks). This diploma at European common repository allows to acquire solid skills in the corporate world.
+                    bac:
+                        date: 2008 - 2009 / "Lycée de l'Erdre" School (44)
+                        title: Baccalaureate Sale
+                        description: The important bases of trade and sale: sales methods and distribution channels, accounting and legal forms, organization and communication.
+
+
+                contact:
+                    nom: Your name
+                    email: Your email
+                    message: Your message
+                    agrandissement: You can extend the window
+                about:
+                    title: Responsive website !
+                    description: This Website was developed with responsive method thanks to Boostrap Framework and JQuery library. It use also the popular Symfony 2 Framework. This page respects the last requirements web and the last requirements of W3C standards. It's compatible with all window sizes, the smartphone to the desk computer !
+        footer:
+            realisation: Construction and development
+            contact: Contact me
