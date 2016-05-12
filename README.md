@@ -1,2 +1,2 @@
 # cv_symfony
-CV avec Symfony et Bootstrap
+CV et blog avec le framework Symfony 2 et Bootstrap
